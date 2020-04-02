@@ -6,17 +6,14 @@ class Song
     @@all
   end
 
-  def create
-    song = Song.create
-    Song.all.include?(song)
-    song
-  end
   def save
     self.class.all << self
   end
 
   def self.create
     song = self.new
+    song.save
+    song
 
   end
 
