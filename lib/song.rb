@@ -9,6 +9,7 @@ class Song
   def create
     song = Song.create
     Song.all.include?(song)
+    song
   end
   def save
     self.class.all << self
